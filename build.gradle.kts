@@ -35,3 +35,8 @@ tasks.jar {
 tasks.assemble {
   enabled = false
 }
+
+// Option: éviter la résolution transitive inutile sur test
+configurations.all {
+  resolutionStrategy.cacheChangingModulesFor(0, "seconds")
+}
