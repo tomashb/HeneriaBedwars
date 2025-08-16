@@ -5,13 +5,20 @@ Plugin BedWars pour **Spigot 1.21** / **Java 21**.
 
 ## Build local (sans wrapper, compile-only)
 1. Installer **Java 21** (JDK).
-2. Installer **Gradle ≥ 8.9** sur le poste.
-3. Lancer:  
+2. Installer **Gradle 9** sur le poste.
+3. Lancer:
    ```bash
    gradle compileJava test
    ```
 
 > ⚠️ Le **CI ne produit pas de JAR** et les tâches `jar/assemble` sont désactivées. Vous ne devez **pas** publier de `.jar` via ce dépôt.
+
+## Tests (Gradle 9)
+Gradle 9 **nécessite** le `junit-platform-launcher` sur le runtime des tests. Déjà déclaré dans `build.gradle.kts` via :
+```kotlin
+testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+```
+Réf. doc Gradle 9 (Testing / JUnit 5). ([docs.gradle.org][1])
 
 ## Commandes
 
