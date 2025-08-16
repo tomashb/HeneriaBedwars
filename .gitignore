@@ -1,21 +1,16 @@
-# Java/IDE
-/.idea/
-/.project
-/.classpath
-/.settings/
-/*.iml
-/.vscode/
-
-# Build
-/build/
-/out/
-/bin/
-
-# Gradle (no wrapper committed)
+# Gradle
 .gradle/
-gradle/
-gradlew
-gradlew.bat
+build/
+out/
+
+# IDE
+*.iml
+.idea/
+.vscode/
+
+# Binaries / archives
+*.jar
+*.zip
 
 # OS
 .DS_Store
