@@ -5,6 +5,9 @@ on:
     branches: [ "**" ]
   pull_request:
 
+permissions:
+  contents: read
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -17,7 +20,7 @@ jobs:
         with:
           distribution: temurin
           java-version: '21'
-          cache: 'gradle'  # active le cache deps Gradle
+          cache: 'gradle'
 
       - name: Setup Gradle (no wrapper)
         uses: gradle/actions/setup-gradle@v3
@@ -29,11 +32,25 @@ jobs:
           test ! -e gradlew && test ! -e gradlew.bat && test ! -d gradle || \
           (echo "Gradle wrapper détecté, interdit à l'étape 1"; exit 1)
 
-      - name: Build
+      - name: Build & Unit Tests
         run: gradle build --stacktrace --warning-mode all
 
-      - name: Upload plugin jar
+      - name: Quality (Checkstyle + Coverage)
+        run: |
+          gradle check jacocoTestReport --stacktrace
+          echo "Checkstyle: build/reports/checkstyle/"
+          echo "JaCoCo HTML: build/reports/jacoco/test/html/index.html"
+
+      - name: Upload JAR
         uses: actions/upload-artifact@v4
         with:
           name: HeneriaBedwars-${{ github.sha }}
           path: build/libs/*.jar
+
+      - name: Upload QA reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: qa-reports-${{ github.sha }}
+          path: |
+            build/reports/checkstyle/**
+            build/reports/jacoco/test/**

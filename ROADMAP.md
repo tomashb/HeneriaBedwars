@@ -5,6 +5,12 @@ Créer un Bedwars performant et stable, 100% Spigot, sans dépendances dures, av
 
 ## Étape 1 — Bootstrap & Fondation (cette livraison)
 Objectif : livrer un dépôt exploitable **prod** avec CI et squelette plugin, prêt pour itérations gameplay.
+- **AJOUT (Ticket #002) — Qualité & Gouvernance**
+  - Checkstyle + JaCoCo intégrés au build.
+  - CI renforcée (cache, rapports, artefacts) et garde-fou anti-wrapper Gradle.
+  - Templates Issues/PR, CODEOWNERS, SECURITY.md.
+  - Dependabot (actions + gradle).
+  - Release Drafter pour notes de version auto.
 
 ### 1. Build & Toolchain
 - Java 21 (toolchain).
