@@ -9,3 +9,6 @@
 - Normalisation: `.editorconfig`, `.gitattributes`, `.gitignore`.
 - Docs: README, ROADMAP (Étape 1 verrouillée).
 
+### Corrigé
+- CI: échec `:test` sous **Gradle 9** (« Failed to load JUnit Platform ») → ajout de `testRuntimeOnly("org.junit.platform:junit-platform-launcher")` conformément à la documentation Gradle 9.
+

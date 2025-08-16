@@ -9,6 +9,7 @@
 - [x] `.editorconfig`, `.gitattributes`, `.gitignore`
 - [x] README/CHANGELOG/ROADMAP à jour
 - [x] Tests unitaires de base
+- [x] Fix CI Gradle 9 / JUnit Platform Launcher
 
 > Réfs: Java 21 requis 1.21 ; Spigot snapshots 1.21. :contentReference[oaicite:5]{index=5}
 
