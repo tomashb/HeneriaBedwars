@@ -1,0 +1,5 @@
+prefix: "&b[Heneria]&r "
+errors:
+  no_permission: "&cPermission insuffisante."
+info:
+  reloaded: "&aConfiguration rechargée."
