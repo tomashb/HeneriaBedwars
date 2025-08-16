@@ -1,6 +1,6 @@
 prefix: "&7[&bHeneria&7] "
 messages:
-  join-lobby: "%prefix%&aBienvenue en lobby BedWars."
-  start-countdown: "%prefix%&eLa partie démarre dans &6{seconds}&es."
-  game-started: "%prefix%&aLa partie commence, bonne chance !"
-  game-ended: "%prefix%&cPartie terminée."
+  version: "%prefix%&aHeneriaBedwars v{version}"
+  reloaded-ok: "%prefix%&aConfiguration rechargée."
+  reloaded-fail: "%prefix%&cErreur lors du rechargement (voir la console)."
+

@@ -5,7 +5,19 @@ api-version: '1.21'
 author: Heneria
 description: BedWars plugin for Spigot 1.21 (bootstrap stage)
 website: https://github.com/tomashb/HeneriaBedwars
+
+commands:
+  hbw:
+    description: Commandes de base HeneriaBedwars
+    usage: "/hbw <version|reload>"
+    permission: heneria.use
+    aliases: [heneria, hbedwars]
+
 permissions:
+  heneria.use:
+    description: Accès aux commandes utilisateur HeneriaBedwars
+    default: true
   heneria.admin:
-    description: Accès aux commandes d'administration HeneriaBedwars
+    description: Accès admin (reload, etc.)
     default: op
+

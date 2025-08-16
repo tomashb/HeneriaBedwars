@@ -25,5 +25,13 @@ jobs:
         run: gradle --version
 
       - name: Compile & Test (no jar)
+        run: gradle compileJava test --no-daemon
+
+      - name: Assert no JAR produced
         run: |
-          gradle compileJava test --no-daemon
+          if ls build/libs/*.jar 2>/dev/null; then
+            echo "JAR found but should not be produced on CI."
+            exit 1
+          else
+            echo "OK: no JAR produced."
+          fi
