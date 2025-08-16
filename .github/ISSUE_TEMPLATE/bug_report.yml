@@ -1,0 +1,25 @@
+name: 🐞 Bug report
+description: Signaler un bug
+labels: [bug]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description du bug
+      description: Comportement observé vs attendu
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version plugin
+      placeholder: ex. 0.0.1
+  - type: textarea
+    id: server
+    attributes:
+      label: Environnement serveur
+      description: Spigot version, Java, plugins, logs pertinents
+  - type: textarea
+    id: steps
+    attributes:
+      label: Étapes de reproduction

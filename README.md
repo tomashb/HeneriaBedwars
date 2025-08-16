@@ -24,6 +24,16 @@ Base “prod” du plugin Bedwars maison (Java 21, Spigot 1.21).
 ## Performances (Spigot)
 Mettre `sync-chunk-writes=false` dans `server.properties` (I/O chunks off-thread). *(Recommandation Étape 1)*
 
+## Qualité & CI
+- **Checkstyle** : `gradle check` → rapports `build/reports/checkstyle/`.
+- **Couverture (JaCoCo)** : `gradle jacocoTestReport` → HTML `build/reports/jacoco/test/html/index.html`.
+- CI GitHub Actions (JDK 21 + setup-gradle, cache, artéfacts JAR et rapports).
+
+## Contribuer
+- Ouvrez une issue (bug/feature) via les templates.
+- Ouvrez une PR (template fourni). Le pipeline doit passer (build, checkstyle, couverture).
+- **Interdit** : committer `gradlew*` ou dossier `gradle/`.
+
 ## Roadmap
 Voir [ROADMAP.md](./ROADMAP.md).
 
