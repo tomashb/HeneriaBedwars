@@ -1,0 +1,22 @@
+# Java/IDE
+/.idea/
+/.project
+/.classpath
+/.settings/
+/*.iml
+/.vscode/
+
+# Build
+/build/
+/out/
+/bin/
+
+# Gradle (no wrapper committed)
+.gradle/
+gradle/
+gradlew
+gradlew.bat
+
+# OS
+.DS_Store
+Thumbs.db
