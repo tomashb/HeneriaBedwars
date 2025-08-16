@@ -1,3 +1,11 @@
-# HeneriaBedwars - configuration de base (Étape 1)
+# HeneriaBedwars - Config de base (Étape 1)
 debug: false
-locale: "fr_FR"
+
+# Paramètres globaux de jeu (draft, non encore utilisés)
+game:
+  min-players: 2
+  max-players: 16
+  countdown-seconds: 20
+
+# Placeholders arènes (Étapes suivantes: arena.yml par arène)
+arenas: []

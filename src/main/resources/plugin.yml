@@ -1,17 +1,11 @@
 name: HeneriaBedwars
-main: fr.heneria.bedwars.HeneriaBedwarsPlugin
-version: "${version}"
-api-version: "1.21"
-authors: [ "Heneria" ]
-description: "HeneriaBedwars (Spigot 1.21) - étape 1"
-website: "https://github.com/tomashb/HeneriaBedwars"
-commands:
-  hbw:
-    description: Commande HeneriaBedwars
-    usage: "/hbw <version|reload|help>"
-    permission: "heneria.use"
+main: gg.heneria.bedwars.HeneriaBedwarsPlugin
+version: 0.0.1
+api-version: '1.21'
+author: Heneria
+description: BedWars plugin for Spigot 1.21 (bootstrap stage)
+website: https://github.com/tomashb/HeneriaBedwars
 permissions:
-  heneria.use:
-    default: true
   heneria.admin:
+    description: Accès aux commandes d'administration HeneriaBedwars
     default: op

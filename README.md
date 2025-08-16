@@ -1,41 +1,20 @@
-# HeneriaBedwars (Spigot 1.21) — Étape 1
+# HeneriaBedwars (v0.0.1)
 
-Base “prod” du plugin Bedwars maison (Java 21, Spigot 1.21).
+Plugin BedWars pour **Spigot 1.21**. Ce dépôt est initialisé avec:
+- Build **Gradle (sans wrapper)**, Java 21.
+- **CI GitHub Actions**: compile & tests **sans produire de JAR**.
+- **Squelette** plugin (plugin.yml, config.yml, messages.yml, classe Main minimale).
+- **ROADMAP** (Étape 1 détaillée), **CHANGELOG**.
 
-## Build local (sans wrapper)
-- Prérequis : Java 21 + Gradle ≥ 8.9 installé.
-- Commande : `gradle build`
-- Jar : `build/libs/HeneriaBedwars-0.0.1.jar`
+> Java 21 / 1.21 confirmés par écosystème Spigot/Paper; dépendances API via hub.spigotmc.org (snapshots 1.21). Voir références en fin de ROADMAP.
 
-## Installation
-1) Serveur **Spigot 1.21** (Java 21).
-2) Déposer le JAR dans `plugins/`.
-3) Démarrer, vérifier les logs.
-4) Test : `/hbw version`, `/hbw reload`.
+## Build local
+1. Installer **Java 21** (JDK).
+2. Installer **Gradle** (système) si absent.
+3. `gradle --version` puis `gradle compileJava test` (pas de jar).
 
-## Commandes
-- `/hbw version` — affiche la version.
-- `/hbw reload` — recharge `config.yml`.
-
-## Permissions
-- `heneria.use` (true par défaut)
-- `heneria.admin` (op)
-
-## Performances (Spigot)
-Mettre `sync-chunk-writes=false` dans `server.properties` (I/O chunks off-thread). *(Recommandation Étape 1)*
-
-## Qualité & CI
-- **Checkstyle** : `gradle check` → rapports `build/reports/checkstyle/`.
-- **Couverture (JaCoCo)** : `gradle jacocoTestReport` → HTML `build/reports/jacoco/test/html/index.html`.
-- CI GitHub Actions (JDK 21 + setup-gradle, cache, artéfacts JAR et rapports).
-
-## Contribuer
-- Ouvrez une issue (bug/feature) via les templates.
-- Ouvrez une PR (template fourni). Le pipeline doit passer (build, checkstyle, couverture).
-- **Interdit** : committer `gradlew*` ou dossier `gradle/`.
-
-## Roadmap
-Voir [ROADMAP.md](./ROADMAP.md).
+## CI
+Voir `.github/workflows/ci.yml` (compile-only).
 
 ## Licence
-MIT
+MIT.
